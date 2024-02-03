@@ -7,6 +7,6 @@ public class MyTest {
 
         public static void main(String[] args) {
             logger.info("Hello SLF4J!");
-            logger.info("Application deployed Successfully, HAPPY K8 CLUSTER DEPLOYMENT");
+            logger.info("Application deployed Successfully, HAPPY K8-CLUSTER DEPLOYMENT");
         }
 }
