@@ -32,36 +32,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>3.4.0</version> <!-- Check for the latest version on Maven Central -->
-                <configuration>
-                        <!-- Specify the base image (OpenJDK 17 in this case) -->
-                    <from>
-                        <image>eclipse-temurin:17</image>
-                    </from>
-                    <to>
-                        <image>gcr.io/corejava-project/saroj-docker-imagecls
-                        </image>
-                    </to>
-
-                    <!-- Specify GCR credentials -->
-                    <!--auth>
-                        <username>_json_key</username>
-                        <password>${project.basedir}/path/to/your/keyfile.json</password>
-                    </auth-->
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
-
-            </plugin>
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.1</version> <!-- Use the latest version -->
