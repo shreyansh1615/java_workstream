@@ -15,6 +15,10 @@ export PATH=${JAVA_HOME}/bin:$PATH
 export M2_HOME=/Users/<sarojsahoo>/softwares/apache-maven-3.9.5
 export PATH=$M2_HOME/bin:$PATH
 
+# Press Esc to exit insert mode.
+# Type :w and press Enter to save.
+# Type :q and press Enter to quit.
+
 # After update, close the Terminal and open a new Terminal or you can use below command in same console.
 >> source ~/.zshrc
 
