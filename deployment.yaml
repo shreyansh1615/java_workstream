@@ -1,0 +1,33 @@
+# kubectl apply -f deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-demo
+  namespace: corejava-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gcr-k8-deployment-demo
+  template:
+    metadata:
+      labels:
+        app: gcr-k8-deployment-demo
+    spec:
+      containers:
+        - name: gcr-k8-deployment-demo-container
+          image: gcr.io/corejava-project/gcr-k8-deployment-demo-image
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "1"
+            limits:
+                memory: "3Gi"
+                cpu: "1"
+          volumeMounts:
+            - name: app-volume
+              mountPath: /app-path-loc
+      volumes:
+            - name: app-volume
+              emptyDir: {}
+

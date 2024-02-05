@@ -27,9 +27,16 @@ export PATH=$M2_HOME/bin:$PATH
 >> echo $PATH
 >> mvn -V
 >> java -version
+# create new project or login to google cloud and get the project name and update JIB plugin <configuration>  in pom.xml file.
+ <image>gcr.io/<corejava-project>/<gcr-k8-deployment-demo-image></image>
+change <corejava-project> and <gcr-k8-deployment-demo-image> as per your requirement.
 
 # Open Terminal to compile and run the code using maven command
 >> mvn clean package
 >> mvn exec:java
+
+# if you find any gcr authentication error, Run the following command to authenticate
+# it will set up the default application credentials.
+>> gcloud auth application-default login
 
 
